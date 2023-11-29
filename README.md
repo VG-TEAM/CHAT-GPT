@@ -5,7 +5,7 @@
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=CRAZY-DEVELOPER-TEAM&repo=CHATGPT&theme=flag-india)
 [![GIF](https://github.com/CRAZYTEAM/DAXXCHATGPT/blob/main/CRAZYTEAM.gif)](https://github.com/DAXXTEAM)
-   [![𝐌𝐑.𝐃𝐀𝐗𝐗](https://github-stats-alpha.vercel.app/api?username=CRAZY-DEVELOPER-TEAM"VIKAS")](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")
+   [![VIKAS](https://github-stats-alpha.vercel.app/api?username=CRAZY-DEVELOPER-TEAM"VIKAS")](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")
                   
 
 
