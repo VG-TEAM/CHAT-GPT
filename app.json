@@ -1,0 +1,65 @@
+
+{
+  "name": "𝗖𝗛𝗔𝗧𝗚𝗣𝗧𝗕𝗢𝗧",
+  "description": "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗖𝗛𝗔𝗧 𝗚𝗣𝗧 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 vikas.",
+  "logo": "https://graph.org/file/b840154ca8a628e14577d.jpg",
+  "keywords": [
+    "telegram", "chatgpt",
+    "python",
+    "pyrogram",
+    "CRAZYTEAM"   
+  ],
+  "stack": "heroku-20",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "env": {
+    "BOT_TOKEN": { "description": "𝗕𝗢𝗧 𝗧𝗢𝗞𝗘𝗡 𝗗𝗔𝗟 𝗡𝗔𝗔 𝗝𝗛𝗔𝗔𝗧𝗛𝗨",
+      "required": true
+    },
+    "OWNER_USERNAME": {
+      "description": "𝗧𝗘𝗥𝗔 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 @",
+      "required": true
+    },
+    "OPENAI_KEY": {
+      "description": "𝗢𝗣𝗘𝗡 𝗔𝗜 𝗔𝗣𝗜 𝗞𝗘𝗬 ",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "𝗕𝗢𝗧 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 𝗗𝗔𝗟 𝗗𝗘 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 @",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "𝗕𝗢𝗧 𝗡𝗔𝗠𝗘 𝗧𝗢 𝗗𝗔𝗟 𝗗𝗘 𝗕𝗛𝗔𝗜 𝗣𝗛𝗟𝗘.",
+      "required": true
+    },
+    "SUPPORT_GRP": {
+      "description": "𝗚𝗥𝗢𝗨𝗣 𝗡𝗔𝗠𝗘 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 @",
+      "required": true
+    },
+    "STKR": {
+      "description": "𝗦𝗧𝗞𝗥 ", "required": true
+    },
+    "START_IMG": {
+      "description": "𝗦𝗧𝗔𝗥𝗧 𝗕𝗢𝗧 𝗨𝗥𝗟 𝗗𝗔𝗟𝗘 𝗗𝗘 𝗟𝗢𝗡𝗗𝗨.",
+      "required": true
+    },
+    "UPDATE_CHNL": {
+      "description": "𝗬𝗔𝗛𝗔 𝗧𝗘𝗥𝗔 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗗𝗔𝗟 𝗪𝗜𝗧𝗛𝗢𝗨𝗧 @",
+      "required": true
+    },
+    "API_ID": { "description": "𝗔𝗣𝗜 𝗜𝗗 𝗬𝗔𝗛𝗔 𝗣",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "𝗔𝗣𝗜 𝗛𝗔𝗦𝗛 𝗗𝗔𝗟 𝗗𝗘 𝗕𝗔𝗦𝗦 𝗞𝗛𝗔𝗧𝗔𝗠",
+      "required": true
+    }
+  },
+  "repository": "https://github.com/Vikas-841/chatgpt/"
+}
