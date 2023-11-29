@@ -3,9 +3,9 @@
 
 
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=CRAZYTEAM&repo=VIKASCHATGPT&theme=flag-india)
-[![GIF](https://github.com/DAXXTEAM/DAXXCHATGPT/blob/main/CRAZYTEAM.gif)](https://github.com/DAXXTEAM)
-   [![𝐌𝐑.𝐃𝐀𝐗𝐗](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")
+![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=CRAZY-DEVELOPER-TEAM&repo=CHATGPT&theme=flag-india)
+[![GIF](https://github.com/CRAZYTEAM/DAXXCHATGPT/blob/main/CRAZYTEAM.gif)](https://github.com/DAXXTEAM)
+   [![𝐌𝐑.𝐃𝐀𝐗𝐗](https://github-stats-alpha.vercel.app/api?username=CRAZY-DEVELOPER-TEAM"VIKAS")](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")
                   
 
 
@@ -15,7 +15,7 @@
 
 
 # Deploy To Heroku 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Vikas-841/chatgpt)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/CRAZY-DEVELOPER-TEAM/CHAT-GPT)
 
 ### Contact :
 <a href="https://t.me/KIRA_DEVELOPER"><img title="Telegram" src="https://img.shields.io/badge/Telegram-%23000000.svg?&style=for-the-badge&logo=telegram&logoColor=61DAFB"></a>
