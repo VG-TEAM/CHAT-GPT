@@ -5,7 +5,7 @@
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/top-langs?username=vg-team&show_icons=true&locale=en&layout=compact)
 [![GIF](https://github.com/CRAZYTEAM/DAXXCHATGPT/blob/main/CRAZYTEAM.gif)](https://github.com/DAXXTEAM)
-   [![VIKAS](https://github-readme-stats.vercel.app/api?username=vg-team&show_icons=true&locale=en"VIKAS")](https://github-readme-stats.vercel.app/api?username=vg-team&show_icons=true&locale=en "VIKAS")
+   [![VIKAS](https://github-readme-streak-stats.herokuapp.com/?user=vg-team&"VIKAS")](https://github-readme-stats.vercel.app/api?username=vg-team&show_icons=true&locale=en "VIKAS")
                   
 
 
