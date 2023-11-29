@@ -3,7 +3,7 @@
 
 
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=CRAZY-DEVELOPER-TEAM&repo=CHATGPT&theme=flag-india)
+![Readme Card](https://github-readme-stats.vercel.app/api/top-langs?username=vg-team&show_icons=true&locale=en&layout=compact)
 [![GIF](https://github.com/CRAZYTEAM/DAXXCHATGPT/blob/main/CRAZYTEAM.gif)](https://github.com/DAXXTEAM)
    [![VIKAS](https://github-stats-alpha.vercel.app/api?username=CRAZY-DEVELOPER-TEAM"VIKAS")](https://github-stats-alpha.vercel.app/api?username=CRAZYTEAM "VIKAS")
                   
