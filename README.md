@@ -11,7 +11,7 @@
 
 
 
-<p><img width="494" align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=CRAZYTEAM&show_icons=true&locale=en&layout=compact" alt="CRAZYTEAM" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=vg-team&show_icons=true&locale=en" alt="vg-team" /></p>
 
 
 # Deploy To Heroku 
