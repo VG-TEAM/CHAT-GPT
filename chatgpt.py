@@ -140,7 +140,7 @@ async def restart(client, message):
        )
 
     
-    await m.reply_photo(START_IMG, caption=SOURCE_TEXT, reply_markup=SOURCE_BUTTONS)
+    
 #  alive
 @vikas.on_message(filters.command(["ping","alive"], prefixes=["+", "/", "-", "?", "$", "&","."]))
 async def ping(client, message: Message):
