@@ -162,42 +162,32 @@ async def ping(client, message: Message):
 #  main   
 openai.api_key = OPENAI_KEY
 
-
-
-
-# Message handler for handling user messages
-def chat_gpt(update, context):
+@vikas.on_message(filters.private)  # Only respond to private messages
+async def auto_reply_handler(client, message):
     try:
         start_time = time.time()
-        context.bot.send_chat_action(update.message.chat_id, ChatAction.TYPING)
+        await client.send_chat_action(message.chat.id, ChatAction.TYPING)
 
-        if update.message.text.startswith('/chatgpt'):
-            question = ' '.join(context.args)
-            
-            # Check if the message is from a private chat
-            if update.message.chat.type == "private":
-                # Check if the message contains HTML code
-                if "<html>" in question.lower():  # Modify this condition based on your HTML detection logic
-                    update.message.reply_text("I detected HTML code in your message. Please provide a plain text question.")
-                else:
-                    # Personal message response using OpenAI GPT-3.5-turbo
-                    model = "gpt-3.5-turbo"
-                    response = openai.ChatCompletion.create(
-                        model=model,
-                        messages=[{"role": "user", "content": question}],
-                        temperature=0.2
-                    )
-                    answer = response['choices'][0]["message"]["content"]
-                    
-                    end_time = time.time()
-                    response_time = str(round((end_time - start_time) * 1000, 3)) + " ms"
-                    
-                    update.message.reply_text(f"You asked:\n\n{question}\n\nChatGPT answered:\n\n{answer}\n\nResponse time: {response_time}")
-            else:
-                # Group message response
-                update.message.reply_text("I can only respond to private messages in this group.")
+        # Extract the user's message
+        user_message = message.text
+
+        # Your logic to interact with OpenAI GPT goes here
+        # For example, you can use OpenAI API to get a response
+        model = "gpt-3.5-turbo"
+        response = openai.ChatCompletion.create(
+            model=model,
+            messages=[{"role": "user", "content": user_message}],
+            temperature=0.2
+        )
+        answer = response['choices'][0]["message"]["content"]
+
+        # Send the GPT-generated answer as a reply
+        end_time = time.time()
+        response_time = str(round((end_time - start_time) * 1000, 3)) + " ms"
+        await message.reply_text(f"ChatGPT answered:\n\n{answer}\n\nResponse time: {response_time}")
     except Exception as e:
-        update.message.reply_text(f"Error: {e}")
+        await message.reply_text(f"Error: {e}")
+        
 
 
 
