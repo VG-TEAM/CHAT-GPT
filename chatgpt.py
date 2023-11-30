@@ -161,7 +161,7 @@ async def ping(client, message: Message):
 
 #  main   
 openai.api_key = OPENAI_KEY
-@vikas.on_message(filters.command(["chatgpt","ai","ask"],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
+@vikas.on_message(filters.command(["","",""],  prefixes=["+", ".", "/", "-", "?", "$","#","&"]))
 async def chat(bot, message):
     
     try:
