@@ -105,7 +105,7 @@ def start(update: Update, context: CallbackContext) -> None:
     user_id = update.message.from_user.id
 
     # Check if the user is already in the channel
-    if user_in_channel(user_id):
+    if user_in_channel(user_id, context):
         update.message.reply_text('You are already subscribed. You can use the bot.')
     else:
         # Prompt the user to join the channel
@@ -115,7 +115,7 @@ def start(update: Update, context: CallbackContext) -> None:
             reply_markup={'inline_keyboard': [[{'text': 'Join Channel', 'url': f'https://t.me/{CHANNEL_ID}'}]]}
         )
 
-def user_in_channel(user_id: int) -> bool:
+def user_in_channel(user_id: int, context: CallbackContext) -> bool:
     # Implement logic to check if the user is in the channel using the Telegram Bot API
     try:
         # Get chat member information
@@ -125,9 +125,7 @@ def user_in_channel(user_id: int) -> bool:
     except Exception as e:
         print(f"Error checking user in channel: {e}")
         return False
-
-def main() -> None:
-    updater = Updater(TOKEN)
+        
 
     dp = updater.dispatcher
 
