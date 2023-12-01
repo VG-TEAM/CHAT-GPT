@@ -1,5 +1,3 @@
-from telegram import Update, ParseMode
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 from pyrogram import Client, filters,enums,idle
 from pyrogram.errors import ApiIdInvalid, ApiIdPublishedFlood, AccessTokenInvalid
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
@@ -98,47 +96,9 @@ HELP_BACK = [
     ],
 ]
 
- #force sub
+ 
 
-# Replace 'YOUR_CHANNEL_ID' with your actual channel ID (e.g., @your_channel)
-CHANNEL_ID = '-1001875834087'
-
-def start(update: Update, context: CallbackContext) -> None:
-    user_id = update.message.from_user.id
-
-    # Check if the user is already in the channel
-    if user_in_channel(user_id, context):
-        update.message.reply_text('You are already subscribed. You can use the bot.')
-    else:
-        # Prompt the user to join the channel
-        update.message.reply_text(
-            f'Welcome! To use this bot, please join our channel: {CHANNEL_ID}',
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup={'inline_keyboard': [[{'text': 'Join Channel', 'url': f'https://t.me/{CHANNEL_ID}'}]]}
-        )
-
-def user_in_channel(user_id: int, context: CallbackContext) -> bool:
-    # Implement logic to check if the user is in the channel using the Telegram Bot API
-    try:
-        # Get chat member information
-        chat_member = context.bot.get_chat_member(chat_id=CHANNEL_ID, user_id=user_id)
-        # Check if the user is a member of the channel
-        return chat_member.status == 'member'
-    except Exception as e:
-        print(f"Error checking user in channel: {e}")
-        return False
-        
-
-    dp = updater.dispatcher
-
-    dp.add_handler(CommandHandler("start", start))
-
-    updater.start_polling()
-
-    updater.idle()
-
-if __name__ == '__main__':
-    main()
+    
     
 #         start
 @vikas.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
