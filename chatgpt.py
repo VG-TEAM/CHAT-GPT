@@ -96,35 +96,50 @@ HELP_BACK = [
     ],
 ]
 
- #force sub 
+ #force sub
 
+# Replace 'YOUR_CHANNEL_ID' with your actual channel ID (e.g., @your_channel)
+CHANNEL_ID = '-1001875834087'
 
-async def not_subscribed(_, client, message):
-    await db.add_user(client, message)
-    if not Config.FORCE_SUB:
-        return False
-    try:             
-        user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id) 
-        if user.status == enums.ChatMemberStatus.BANNED:
-            return True 
-        else:
-            return False                
-    except UserNotParticipant:
-        pass
-    return True
+def start(update: Update, context: CallbackContext) -> None:
+    user_id = update.message.from_user.id
 
+    # Check if the user is already in the channel
+    if user_in_channel(user_id):
+        update.message.reply_text('You are already subscribed. You can use the bot.')
+    else:
+        # Prompt the user to join the channel
+        update.message.reply_text(
+            f'Welcome! To use this bot, please join our channel: {CHANNEL_ID}',
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup={'inline_keyboard': [[{'text': 'Join Channel', 'url': f'https://t.me/{CHANNEL_ID}'}]]}
+        )
 
-@Client.on_message(filters.private & filters.create(not_subscribed))
-async def forces_sub(client, message):
-    buttons = [[InlineKeyboardButton(text="📢 Join Update Channel 📢", url=f"https://t.me/{Config.FORCE_SUB}") ]]
-    text = "**Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
+def user_in_channel(user_id: int) -> bool:
+    # Implement logic to check if the user is in the channel using the Telegram Bot API
     try:
-        user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)    
-        if user.status == enums.ChatMemberStatus.BANNED:                                   
-            return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")  
-    except UserNotParticipant:                       
-        return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
-    return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+        # Get chat member information
+        chat_member = context.bot.get_chat_member(chat_id=CHANNEL_ID, user_id=user_id)
+        # Check if the user is a member of the channel
+        return chat_member.status == 'member'
+    except Exception as e:
+        print(f"Error checking user in channel: {e}")
+        return False
+
+def main() -> None:
+    updater = Updater(TOKEN)
+
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler("start", start))
+
+    updater.start_polling()
+
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
+    
 #         start
 @vikas.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
 async def start(client, m: Message):
